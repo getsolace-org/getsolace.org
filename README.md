@@ -3,8 +3,6 @@
 A static website project for [getsolace.org](https://getsolace.org). The goal of getsolace.org is to provide a clean, responsive, and easily navigable website for users seeking helpful resources, community, or any content related to Solace.
 
 ## Table of Contents
-- [Features](#features)
-- [Folder Structure](#folder-structure)
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
 - [License](#license)
