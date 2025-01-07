@@ -14,6 +14,8 @@
     </header>
     <nav>
         <a href="/">Home</a>
+        <a href="/core/">Core</a>
+        <a href="/settings/">Settings</a>
     </nav>
     <main>
         <h2>404 - Page Not Found</h2>
@@ -25,5 +27,13 @@
     <footer>
         <p>&copy; 2025 Solace. All rights reserved.</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            }
+        });
+    </script>
 </body>
 </html>

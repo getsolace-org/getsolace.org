@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solace - A New Path</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Solace</h1>
+        <p>A New Path to Tranquility and Purpose</p>
+        <img src="../assets/images/symbol.transparent.webp" alt="Solace Symbol" style="width: 100px; height: auto; margin-top: 1rem;">
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/core/">Core</a>
+    </nav>
+    <main>
+        <h1>Settings</h1>
+        <label for="colorPicker">Choose a color:</label>
+        <div id="colorPalette">
+            <button class="color-option" style="background-color: #e2ffe5; width: 40px; height: 40px; border-radius: 50%;" data-theme="green"></button>
+            <button class="color-option" style="background-color: #bfe4ff; width: 40px; height: 40px; border-radius: 50%;" data-theme="blue"></button>
+            <button class="color-option" style="background-color: #fffac1; width: 40px; height: 40px; border-radius: 50%;" data-theme="yellow"></button>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                const colorOptions = document.querySelectorAll('.color-option');
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme) {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                }
+                colorOptions.forEach(option => {
+                    option.addEventListener('click', (event) => {
+                        const theme = event.target.getAttribute('data-theme');
+                        localStorage.setItem('theme', theme);
+                        document.documentElement.setAttribute('data-theme', theme);
+                    });
+                });
+            });
+        </script>
+    </main>
+    <footer>
+        <p>&copy; 2025 Solace. All rights reserved.</p>
+    </footer>
+</body>
+</html>

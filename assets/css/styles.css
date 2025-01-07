@@ -1,72 +1,145 @@
+:root {
+    --general-color: #00796b;
+    --background-color: #e0f7fa;
+    --header-background-color: #00796b;
+    --header-text-color: white;
+    --nav-background-color: #00796b;
+    --nav-text-color: #777777;
+    --nav-button-background-color: #00907f;
+    --nav-button-background-color-hover: #00796b;
+    --footer-background-color: #00796b;
+    --footer-text-color: white;
+    --main-background-color: #ffffff;
+}
+
+[data-theme="green"] {
+    --general-color: #00796b;
+    --background-color: #e0f7fa;
+    --header-background-color: #00796b;
+    --header-text-color: white;
+    --nav-background-color: #00796b;
+    --nav-text-color: #777777;
+    --nav-button-background-color: #00907f;
+    --nav-button-background-color-hover: #009b89;
+    --footer-background-color: #00796b;
+    --footer-text-color: white;
+    --main-background-color: #ffffff;
+}
+
+[data-theme="blue"] {
+    --general-color: #3d86ce;
+    --background-color: #E3F2FD;
+    --header-background-color: #3d86ce;
+    --header-text-color: white;
+    --nav-background-color: #3d86ce;
+    --nav-text-color: #777777;
+    --nav-button-background-color: #2196F3;
+    --nav-button-background-color-hover: #4fa7ff;
+    --footer-background-color: #3d86ce;
+    --footer-text-color: white;
+    --main-background-color: #ffffff;
+}
+
+[data-theme="yellow"] {
+    --general-color: #FFF9C4;
+    --background-color: #FFFDE7;
+    --header-background-color: #FFF9C4;
+    --header-text-color: #777777;
+    --nav-background-color: #FFF9C4;
+    --nav-text-color: #777777;
+    --nav-button-background-color: #fff171;
+    --nav-button-background-color-hover: #fefbdc;
+    --footer-background-color: #FFF9C4;
+    --footer-text-color: #979696;
+    --main-background-color: #979696;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #e0f7fa; /* Updated color */
-    color: #004d40; /* Updated color */
+    background-color: var(--background-color);
+    color: var(--general-color);
 }
+
 header {
-    background-color: #00796b; /* Updated color */
-    color: white;
-    padding: 2rem 2rem; /* Increased padding */
+    background-color: var(--header-background-color);
+    color: var(--header-text-color);
+    padding: 2rem 2rem;
     text-align: center;
-    border-bottom: 5px solid #004d40; /* Added border */
+    border-bottom: 5px solid var(--general-color);
 }
+
 header h1 {
     margin: 0;
-    font-size: 3rem; /* Increased font size */
-    margin-bottom: 0.5rem; /* Added margin */
-    color: white; /* Updated color */
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: var(--header-text-color);
 }
+
 header p {
     margin: 0;
     font-size: 1.2rem;
 }
+
 header img {
     width: 100px;
     height: auto;
     margin-top: 1rem;
 }
+
 nav {
-    background-color: #004d40; /* Updated color */
-    color: white;
+    background-color: var(--nav-background-color);
+    color: var(--nav-text-color);
     padding: 0.5rem 0;
     text-align: center;
 }
+
 nav a {
-    color: white;
+    color: var(--header-text-color);
     text-decoration: none;
     margin: 0 1rem;
-    font-size: 1.2rem; /* Increased font size */
-    padding: 0.5rem 1rem; /* Added padding */
-    background-color: #004d40; /* Added background color */
-    border-radius: 5px; /* Added border radius */
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--nav-button-background-color);
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 nav a:hover {
-    background-color: #00332e; /* Added hover effect */
+    background-color: var(--nav-button-background-color-hover);
 }
+
 main {
     max-width: 800px;
     margin: 2rem auto;
     padding: 1rem;
-    background: #fff;
+    background: var(--main-background-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
+
 h1, h2, h3 {
-    color: #00796b; /* Updated color */
+    color: var(--general-color);
 }
+
 ul {
     padding-left: 1.5rem;
 }
+
 li {
     margin: 0.5rem 0;
 }
+
 footer {
     text-align: center;
     padding: 1rem;
-    background: #00796b; /* Updated color */
-    color: #fff;
+    background: var(--footer-background-color);
+    color: var(--footer-text-color);
     margin-top: 2rem;
+}
+
+.color-option {
+    border: 1px solid var(--nav-text-color);
 }
