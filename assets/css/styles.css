@@ -160,3 +160,7 @@ nav a.active {
     color: var(--general-color);
     text-decoration: underline;
 }
+
+html {
+    overflow-y: scroll;
+}
