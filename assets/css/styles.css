@@ -1,66 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
 :root {
     --general-color: #00796b;
-    --background-color: #e0f7fa;
-    --header-background-color: #00796b;
+    --background-color: #e5fff7;
+    --header-background-color: var(--general-color);
     --header-text-color: white;
-    --nav-background-color: #00796b;
+    --nav-background-color: var(--general-color);
     --nav-text-color: #777777;
     --nav-button-background-color: #00907f;
-    --nav-button-background-color-hover: #00796b;
-    --footer-background-color: #00796b;
+    --nav-button-background-color-hover: var(--general-color);
+    --footer-background-color: var(--general-color);
     --footer-text-color: white;
     --main-background-color: #ffffff;
+    --main-font-color: var(--general-color);
+    --main-font-header-color: var(--header-text-color);
 }
 
 [data-theme="green"] {
     --general-color: #00796b;
-    --background-color: #e0f7fa;
-    --header-background-color: #00796b;
+    --background-color: #e5fff7;
+    --header-background-color: var(--general-color);
     --header-text-color: white;
-    --nav-background-color: #00796b;
+    --nav-background-color: var(--general-color);
     --nav-text-color: #777777;
     --nav-button-background-color: #00907f;
     --nav-button-background-color-hover: #009b89;
-    --footer-background-color: #00796b;
+    --footer-background-color: var(--general-color);
     --footer-text-color: white;
     --main-background-color: #ffffff;
+    --main-font-color: var(--general-color);
+    --main-font-header-color: var(--general-color);
 }
 
 [data-theme="blue"] {
     --general-color: #3d86ce;
     --background-color: #E3F2FD;
-    --header-background-color: #3d86ce;
+    --header-background-color: var(--general-color);
     --header-text-color: white;
-    --nav-background-color: #3d86ce;
+    --nav-background-color: var(--general-color);
     --nav-text-color: #777777;
     --nav-button-background-color: #2196F3;
     --nav-button-background-color-hover: #4fa7ff;
-    --footer-background-color: #3d86ce;
+    --footer-background-color: var(--general-color);
     --footer-text-color: white;
     --main-background-color: #ffffff;
+    --main-font-color: var(--general-color);
+    --main-font-header-color: var(--general-color);
 }
 
 [data-theme="yellow"] {
     --general-color: #FFF9C4;
     --background-color: #FFFDE7;
-    --header-background-color: #FFF9C4;
+    --header-background-color: var(--general-color);
     --header-text-color: #777777;
-    --nav-background-color: #FFF9C4;
+    --nav-background-color: var(--general-color);
     --nav-text-color: #777777;
     --nav-button-background-color: #fff171;
     --nav-button-background-color-hover: #fefbdc;
-    --footer-background-color: #FFF9C4;
+    --footer-background-color: var(--general-color);
     --footer-text-color: #979696;
-    --main-background-color: #979696;
+    --main-background-color: #ffffff;
+    --main-font-color: #979696;
+    --main-font-header-color: var(--header-text-color);
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
-    color: var(--general-color);
+    color: var(--main-font-color);
 }
 
 header {
@@ -118,10 +128,11 @@ main {
     background: var(--main-background-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    color: var(--main-font-color);
 }
 
 h1, h2, h3 {
-    color: var(--general-color);
+    color: var(--main-font-header-color);
 }
 
 ul {
