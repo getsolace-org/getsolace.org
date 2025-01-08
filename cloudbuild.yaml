@@ -5,3 +5,6 @@ steps:
   - '-c'
   - |
     gsutil -m rsync -r . gs://getsolace.org
+
+options:
+  logging: NONE
