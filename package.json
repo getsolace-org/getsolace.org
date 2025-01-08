@@ -1,0 +1,28 @@
+{
+  "name": "getsolace.org",
+  "version": "1.0.0",
+  "description": "A static website project for [getsolace.org](https://getsolace.org). The goal of getsolace.org is to provide a clean, responsive, and easily navigable website for users seeking helpful resources, community, or any content related to Solace.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getsolace-org/getsolace.org.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/getsolace-org/getsolace.org/issues"
+  },
+  "homepage": "https://github.com/getsolace-org/getsolace.org#readme",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jsdom": "^25.0.1"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}

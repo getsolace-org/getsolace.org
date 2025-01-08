@@ -1,4 +1,21 @@
 steps:
+# Install dependencies
+- name: 'node:16'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    npm install
+
+# Run Unit Tests
+- name: 'node:16'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    npm test
+
+# Deploy to Google Cloud Storage
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: 'bash'
   args:

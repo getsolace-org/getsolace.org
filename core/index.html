@@ -77,7 +77,11 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 Solace. All rights reserved.</p>
+        <p>&copy; <span id="currentYear"></span> Solace. All rights reserved.</p>
+        <script>
+            // Dynamically set the current year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        </script>
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
