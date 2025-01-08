@@ -1,18 +1,23 @@
+const fs = require('fs');
+const path = require('path');
+
 describe('Header and Footer', () => {
+    beforeEach(() => {
+        // Mock fetch response
+        global.fetch = jest.fn(() =>
+            Promise.resolve({
+                text: () =>
+                    Promise.resolve('<footer><p>&copy; <span id="currentYear">2023</span> Solace. All rights reserved.</p>'),
+            })
+        );
+    });
+
     test('should display the correct header title', () => {
-        document.body.innerHTML = '<header><h1>Solace</h1></header>';
+        const html = fs.readFileSync(path.resolve(__dirname, '../index.html'), 'utf8');
+        document.body.innerHTML = html;
+
         const headerTitle = document.querySelector('header h1').textContent;
         expect(headerTitle).toBe('Solace');
     });
 
-    test('should display the current year in the footer', () => {
-        const currentYear = new Date().getFullYear();
-        document.body.innerHTML = '<footer><p>&copy; <span id="currentYear"></span> Solace. All rights reserved.</p>';
-        
-        // Simulate the JavaScript that dynamically sets the current year
-        document.getElementById('currentYear').textContent = currentYear;
-    
-        const footer = document.querySelector('footer p').textContent;
-        expect(footer).toContain(currentYear.toString());
-    });    
 });

@@ -12,10 +12,7 @@
         <p>A New Path to Tranquility and Purpose</p>
         <img src="../assets/images/symbol.transparent.webp" alt="Solace Symbol" style="width: 100px; height: auto; margin-top: 1rem;">
     </header>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/settings/">Settings</a>
-    </nav>
+    <div id="navbar-container"></div>
     <main>
         <section>
             <h2>Core Principles</h2>
@@ -76,20 +73,9 @@
             </ul>
         </section>
     </main>
-    <footer>
-        <p>&copy; <span id="currentYear"></span> Solace. All rights reserved.</p>
-        <script>
-            // Dynamically set the current year
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-        </script>
-    </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                document.documentElement.setAttribute('data-theme', savedTheme);
-            }
-        });
-    </script>
+    <div id="footer-container"></div>
+    <script src="../assets/js/footer.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/theme.js"></script>
 </body>
 </html>

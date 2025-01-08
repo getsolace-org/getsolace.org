@@ -154,3 +154,9 @@ footer {
 .color-option {
     border: 1px solid var(--nav-text-color);
 }
+
+nav a.active {
+    font-weight: bold;
+    color: var(--general-color);
+    text-decoration: underline;
+}
